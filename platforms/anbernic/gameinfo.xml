@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameList>
+  <game>
+    <path>./Hexic HD.sh</path>
+    <name>Hexic HD</name>
+    <desc>The Xbox 360 Live Arcade puzzle game: rotate clusters of hexagons to match colours, build flowers and pearls, and keep ahead of the bombs. Runs the original Flash game in Ruffle.</desc>
+    <releasedate>20051122T000000</releasedate>
+    <developer>Carbonated Games</developer>
+    <publisher>Microsoft Game Studios</publisher>
+    <genre>Puzzle</genre>
+    <image>./hexichd/cover.png</image>
+  </game>
+</gameList>

@@ -1,0 +1,95 @@
+{
+  "name": "hexic-hd",
+  "productName": "Hexic HD",
+  "version": "1.0.0",
+  "description": "Hexic HD (Xbox 360 XBLA) running in Ruffle, as a desktop app",
+  "author": "Sean Day",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:mac": "electron-builder --mac -c.directories.output=../../dist/macos",
+    "dist:win": "electron-builder --win -c.directories.output=../../dist/windows",
+    "dist": "npm run dist:mac && npm run dist:win"
+  },
+  "devDependencies": {
+    "electron": "44.7.0",
+    "electron-builder": "26.17.0",
+    "resedit": "1.7.2",
+    "pe-library": "0.4.1"
+  },
+  "build": {
+    "appId": "io.github.hexichd",
+    "productName": "Hexic HD",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "preload.js"
+    ],
+    "extraResources": [
+      {
+        "from": "../../build/www",
+        "to": "www"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.puzzle-games",
+      "icon": "build/icon.png",
+      "identity": "-",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "universal"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "universal"
+          ]
+        }
+      ],
+      "hardenedRuntime": false
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-${version}-win-${arch}.${ext}"
+    },
+    "toolsets": {
+      "nsis": "1.2.1"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.exe"
+    },
+    "nsis": {
+      "artifactName": "${productName}-${version}-setup.exe"
+    },
+    "afterPack": "scripts/win-icon.js"
+  },
+  "license": "MIT"
+}

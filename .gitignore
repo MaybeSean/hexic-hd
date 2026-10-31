@@ -1,0 +1,10 @@
+# Your own copy of the game (never committed)
+/original/
+# Downloaded by tools/fetch_vendor.sh
+/vendor/
+# Build output
+/build/
+/dist/
+platforms/desktop/node_modules/
+platforms/desktop/dist/
+.DS_Store
