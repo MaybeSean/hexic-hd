@@ -1,7 +1,9 @@
-# Your own copy of the game (never committed)
-/original/
-# Downloaded by tools/fetch_vendor.sh
-/vendor/
+# Your own copy of the game (never committed; only its README is)
+/original/*
+!/original/README.md
+# Downloaded by tools/fetch_vendor.sh (only its README is committed)
+/vendor/*
+!/vendor/README.md
 # Build output
 /build/
 /dist/

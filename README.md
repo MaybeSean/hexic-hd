@@ -76,7 +76,7 @@ Builds run on **macOS**, which makes both the Mac and the Windows versions.
 ### 1. Requirements
 
 - [Homebrew](https://brew.sh) packages: `brew install python ffmpeg openjdk node`
-- The Hexic HD game files from your own copy, in a folder named `original/` at the root of this repository. The build needs:
+- The Hexic HD game files from your own copy, copied into the `original/` folder ([its README](original/README.md) lists every file). The build needs:
   - `HexicDeluxe.swf`
   - `KeyMap_HXIC.xml`
   - `g.xml` and the other `*_g.xml` / `*_k.xml` localisation files
